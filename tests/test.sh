@@ -108,7 +108,7 @@ BK_DEPLOY_TAROT_RENDER_IMAGES=true \
 BK_DEPLOY_TAROT_IMAGE_BASE_URL="file://$TMP_DIR/cards" \
   bash -c 'cd "$1" && "$2"' _ "$TMP_DIR" "$ROOT_DIR/hooks/pre-command" >"$TMP_DIR/artifact-output.log"
 
-assert_contains "$TMP_DIR/artifact-output.log" $'\033]1337;File=inline=1;'
+assert_contains "$TMP_DIR/artifact-output.log" $'\033]1337;File=inline=1;width=50%;'
 assert_contains "$TMP_DIR/artifact-output.log" "ZmFrZSB3ZWJw"
 
 if grep -Fq -- "artifact://" "$TMP_DIR/artifact-output.log"; then

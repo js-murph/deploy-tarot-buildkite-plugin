@@ -212,7 +212,7 @@ def inline_buildkite_image(source_url, filename, alt):
         return
 
     name = base64.b64encode(filename.encode("utf-8")).decode("ascii")
-    print(f"\033]1337;File=inline=1;name={name};alt='{escape_ansi_param(alt)}':{image}\a")
+    print(f"\033]1337;File=inline=1;width=50%;name={name};alt='{escape_ansi_param(alt)}':{image}\a")
 
 def wrap(text, width=96):
     words = re.split(r"\s+", str(text).strip())
