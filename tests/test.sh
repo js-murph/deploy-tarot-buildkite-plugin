@@ -82,6 +82,7 @@ BK_DEPLOY_TAROT_RENDER_IMAGES=true \
   "$ROOT_DIR/hooks/pre-command" >"$TMP_DIR/output.log"
 
 assert_contains "$TMP_DIR/output.log" "--- ☽ Deploy Tarot ☾"
+assert_contains "$TMP_DIR/output.log" "Reading by Deploy Tarot: https://deploytarot.com"
 assert_contains "$TMP_DIR/output.log" "Verdict: Abort Mission 🛑"
 assert_contains "$TMP_DIR/output.log" "✦ The Foundation: The Tower (reversed)"
 assert_contains "$TMP_DIR/output.log" "https://deploytarot.com/static/cards/16_the_tower.webp"
