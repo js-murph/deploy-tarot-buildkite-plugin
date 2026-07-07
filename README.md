@@ -2,6 +2,8 @@
 
 Draws a [Deploy Tarot](https://deploytarot.com/api) reading before a Buildkite step runs, prints the oracle's verdict, and renders the drawn Major Arcana cards directly in the Buildkite log.
 
+This is a Buildkite plugin for [deploytarot.com](https://deploytarot.com). The readings, verdicts, share pages, API, and card artwork are provided by Deploy Tarot; this plugin only requests a reading and formats it for Buildkite logs.
+
 Buildkite renders images from log output via ANSI escape codes, so this plugin maps the card names returned by the Deploy Tarot API to Deploy Tarot's public card artwork. In Buildkite jobs, the plugin embeds the card art directly in the log using Buildkite's supported base64 inline image format so the images render reliably.
 
 ## Example

@@ -238,6 +238,7 @@ render_images = truthy(os.environ.get("RENDER_IMAGES", "true"))
 image_base_url = os.environ.get("IMAGE_BASE_URL", "https://deploytarot.com/static/cards").rstrip("/")
 
 print("--- ☽ Deploy Tarot ☾")
+print("Reading by Deploy Tarot: https://deploytarot.com")
 print(f"Role: {reading.get('role', 'unknown')}")
 print(f"Intent: {reading.get('intent', 'unknown')}")
 print(f"Verdict: {reading.get('verdict_label', reading.get('verdict', 'unknown'))}")
